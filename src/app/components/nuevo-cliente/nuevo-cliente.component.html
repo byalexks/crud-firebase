@@ -1,0 +1,53 @@
+<h4>Clientes</h4>
+<hr>
+<form autocomplete="off" (ngSubmit)="guardar(f)" #f='ngForm' >
+
+    <div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">ID</label>
+            <div class="col-8">
+        
+                <input class="form-control" type="text" placeholder="firebase id" [(ngModel)]='cliente.id' name="id" disabled='disable'>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nombre</label>
+            <div class="col-8">
+
+                <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]='cliente.nombre' name="nombre" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Apellido</label>
+            <div class="col-8">
+
+                <input class="form-control" type="text" placeholder="Apellido"  [(ngModel)]='cliente.apellido' name="apellido">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Correo</label>
+        <div class="col-8">
+
+            <input class="form-control" type="email" placeholder="Correo electrónico"  [(ngModel)]='cliente.correo' name="correo">
+        </div>
+    </div>
+
+
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary form-control">
+                Guardar
+            </button>
+            <button (click)="limpiarCampos()" type="button" class="btn btn-outline-success form-control">Reset</button>
+        </div>
+    </div>
+
+</form>
